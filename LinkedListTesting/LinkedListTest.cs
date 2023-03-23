@@ -17,6 +17,7 @@ namespace LinkedListTesting {
         "3 4\n" +
         "4 5\n" +
         "5 null\n";
+      Assert.AreEqual(expectedResult, list.Show());
     }
   }
 }
