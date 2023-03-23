@@ -32,7 +32,7 @@ namespace LinkedListTesting {
       list.Append("4");
       list.Append("5");
 
-      expectedLength = 0;
+      expectedLength = 5;
       Assert.AreEqual(expectedLength, list.Length);
     }
   }
