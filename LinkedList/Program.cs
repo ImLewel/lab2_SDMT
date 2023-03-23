@@ -1,7 +1,15 @@
-﻿namespace LinkedList {
+﻿using static LinkedList.LinkedList;
+
+namespace LinkedList {
   public class Program {
     static void Main(string[] args) {
-      Console.WriteLine("Hello, World!");
+      LinkedList list = new(5);
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+      Console.WriteLine(list.Show());
     }
   }
 }
