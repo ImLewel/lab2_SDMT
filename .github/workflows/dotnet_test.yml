@@ -26,8 +26,12 @@ jobs:
     - name: Restore dependencies 2
       run: dotnet restore
       working-directory: LinkedListTesting/
-    - name: Build
+    - name: Build 1
       run: dotnet build --no-restore
+      working-directory: LinkedList/
+    - name: Build 2
+      run: dotnet build --no-restore
+      working-directory: LinkedListTesting/
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: LinkedListTesting/
