@@ -84,6 +84,13 @@ namespace LinkedList {
     }
 
     public Node Get(int index) => List[index];
+
+    public void Extend(LinkedList list) {
+      foreach (Node node in list.List) {
+        List.Add(node);
+      }
+      Relink();
+    }
  
     public class Node {
       public Node? Next;

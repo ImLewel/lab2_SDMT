@@ -10,9 +10,15 @@ namespace LinkedList {
       list.Append("4");
       list.Append("5");
 
-      list.Reverse();
-      Console.WriteLine(list.Show());
-      Console.WriteLine(list.Get(1).Data);
+      LinkedList list2 = new();
+      list2.Append("a");
+      list2.Append("b");
+      list2.Append("c");
+      list2.Append("d");
+      list2.Append("e");
+
+      list2.Extend(list);
+      Console.WriteLine(list2.Show());
     }
   }
 }
