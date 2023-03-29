@@ -57,6 +57,13 @@ namespace LinkedList {
       }
     }
 
+    public void Clear() {
+      List.Clear();
+      Head = null;
+      Tail = null;
+      current = null;
+    }
+
     public class Node {
       public Node? Next;
       public string Data;

@@ -15,6 +15,9 @@ namespace LinkedList {
       list.Insert(0, "8");
       Console.WriteLine(list.Show());
       Console.WriteLine(list.Length);
+      list.Clear();
+      Console.WriteLine(list.Show());
+      Console.WriteLine(list.Length);
     }
   }
 }

@@ -60,5 +60,20 @@ namespace LinkedListTesting {
         "5 null";
       Assert.AreEqual(expectedResult, list.Show());
     }
+    [TestMethod]
+    public void TestClear() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      list.Clear();
+      Assert.AreEqual(list.Show(), "");
+
+      list.Append("5");
+      Assert.AreEqual(list.Show(), "5 null");
+    }
   }
 }
