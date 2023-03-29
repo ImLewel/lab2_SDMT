@@ -33,11 +33,28 @@ namespace LinkedList {
       string result = String.Empty;
       foreach (Node node in List) {
         if (node.Next != null)
+          //result += $"{node.Data} {node.Next.Data} Index:{List.IndexOf(node)}\n";
           result += $"{node.Data} {node.Next.Data}\n";
         else
+          //result += $"{node.Data} null Index:{List.IndexOf(node)}";
           result += $"{node.Data} null";
       }
       return result;
+    }
+
+    public void Insert(int index, string data) {
+      if (index < 0 || index > List.Count)
+        throw (new IndexOutOfRangeException());
+      Node node = new Node(data);
+      List.Insert(index, node);
+      if (index == 0) {
+        Head = node;
+        List[index].Next = List[++index];
+      }
+      else if (index < List.Count) {
+        List[index].Next = List[index + 1];
+        List[index - 1].Next = List[index];
+      }
     }
 
     public class Node {
