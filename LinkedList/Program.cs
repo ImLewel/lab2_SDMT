@@ -6,13 +6,13 @@ namespace LinkedList {
       LinkedList list = new();
       list.Append("1");
       list.Append("2");
+      list.Append("s");
       list.Append("3");
       list.Append("s");
       list.Append("4");
       list.Append("5");
 
-      list.Delete(0);
-      Console.WriteLine(list.Show());
+      Console.WriteLine(list.findFirst("s"));
     }
   }
 }

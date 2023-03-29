@@ -96,6 +96,10 @@ namespace LinkedList {
       List.RemoveAt(index);
       Relink();
     }
+    
+    public int findFirst(string value) {
+      return List.IndexOf(List.Find(node => node.Data == value));
+    }
  
     public class Node {
       public Node? Next;

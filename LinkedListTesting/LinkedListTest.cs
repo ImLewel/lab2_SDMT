@@ -197,5 +197,18 @@ namespace LinkedListTesting {
         "5 null";
       Assert.AreEqual(expectedResult, list.Show());
     }
+    [TestMethod]
+    public void TestFindFirst() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("s");
+      list.Append("4");
+      list.Append("5");
+
+      int expected = 3;
+      Assert.AreEqual(expected, list.findFirst("s"));
+    }
   }
 }
