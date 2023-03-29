@@ -115,5 +115,37 @@ namespace LinkedListTesting {
       list2.deleteAll("s");
       Assert.AreEqual(list.Show(), list2.Show());
     }
+    [TestMethod]
+    public void TestReverse() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      string expectedResult = "5 4\n" +
+        "4 3\n" +
+        "3 2\n" +
+        "2 1\n" +
+        "1 null";
+
+      Assert.AreNotEqual(expectedResult, list.Show());
+      list.Reverse();
+      Assert.AreEqual(expectedResult, list.Show());
+    }
+    [TestMethod]
+    public void TestGet() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      string expected = "3 4";
+      LinkedList.LinkedList.Node node = list.Get(2);
+      Assert.AreEqual(expected, $"{node.Data} {node.Next.Data}");
+    }
   }
 }

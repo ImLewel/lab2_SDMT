@@ -77,6 +77,13 @@ namespace LinkedList {
         }
       }
     }
+
+    public void Reverse() {
+      List.Reverse();
+      Relink();
+    }
+
+    public Node Get(int index) => List[index];
  
     public class Node {
       public Node? Next;
