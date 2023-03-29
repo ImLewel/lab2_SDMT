@@ -98,9 +98,13 @@ namespace LinkedList {
     }
     
     public int findFirst(string value) {
-      return List.IndexOf(List.Find(node => node.Data == value));
+      return List.FindIndex(node => node.Data == value);
     }
- 
+
+    public int findLast(string value) {
+      return List.FindLastIndex(node => node.Data == value);
+    }
+
     public class Node {
       public Node? Next;
       public string Data;

@@ -210,5 +210,19 @@ namespace LinkedListTesting {
       int expected = 3;
       Assert.AreEqual(expected, list.findFirst("s"));
     }
+    [TestMethod]
+    public void TestFindLast() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("s");
+      list.Append("4");
+      list.Append("s");
+      list.Append("5");
+
+      int expected = 5;
+      Assert.AreEqual(expected, list.findLast("s"));
+    }
   }
 }
