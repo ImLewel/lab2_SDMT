@@ -1,11 +1,11 @@
-using LinkedList;
+using ImLewel_LinkedList;
 
 namespace LinkedListTesting {
   [TestClass]
   public class LinkedListTest {
     [TestMethod]
     public void TestAppend() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -22,7 +22,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestLength() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
 
       int expectedLength = 0;
       Assert.AreEqual(expectedLength, list.Length);
@@ -38,7 +38,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestInsert() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
 
       list.Append("1");
       list.Append("2");
@@ -62,7 +62,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestClear() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -77,14 +77,14 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestClone() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
       list.Append("4");
       list.Append("5");
 
-      LinkedList.LinkedList list2 = list.Clone();
+      LinkedList list2 = list.Clone();
       Assert.AreEqual(list2.Show(), list.Show());
 
       list.Append("6");
@@ -93,14 +93,14 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestDeleteAll() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
       list.Append("4");
       list.Append("5");
 
-      LinkedList.LinkedList list2 = new();
+      LinkedList list2 = new();
       list2.Append("1");
       list2.Append("2");
       list2.Append("s");
@@ -117,7 +117,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestReverse() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -136,7 +136,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestGet() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -144,19 +144,19 @@ namespace LinkedListTesting {
       list.Append("5");
 
       string expected = "3 4";
-      LinkedList.LinkedList.Node node = list.Get(2);
+      LinkedList.Node node = list.Get(2);
       Assert.AreEqual(expected, $"{node.Data} {node.Next.Data}");
     }
     [TestMethod]
     public void TestExtend() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("a");
       list.Append("b");
       list.Append("c");
       list.Append("d");
       list.Append("e");
 
-      LinkedList.LinkedList list2 = new();
+      LinkedList list2 = new();
       list2.Append("1");
       list2.Append("2");
       list2.Append("3");
@@ -180,7 +180,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestDelete() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -199,7 +199,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestFindFirst() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -212,7 +212,7 @@ namespace LinkedListTesting {
     }
     [TestMethod]
     public void TestFindLast() {
-      LinkedList.LinkedList list = new();
+      LinkedList list = new();
       list.Append("1");
       list.Append("2");
       list.Append("3");

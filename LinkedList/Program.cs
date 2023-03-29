@@ -1,6 +1,4 @@
-﻿using static LinkedList.LinkedList;
-
-namespace LinkedList {
+﻿namespace ImLewel_LinkedList {
   public class Program {
     static void Main(string[] args) {
       LinkedList list = new();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedList {
+namespace ImLewel_LinkedList {
   public class LinkedList {
     List<Node> List;
     Node Head;
