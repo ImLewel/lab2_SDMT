@@ -21,13 +21,13 @@ jobs:
         dotnet-version: 6.0.x
         
     - name: Restore dependencies 1
-      run: dotnet restore
+      run: dotnet restore LinkedList.sln
       working-directory: LinkedList/
     - name: Restore dependencies 2
       run: dotnet restore
       working-directory: LinkedListTesting/
     - name: Build 1
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore LinkedList.sln
       working-directory: LinkedList/
     - name: Build 2
       run: dotnet build --no-restore
