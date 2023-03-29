@@ -150,34 +150,33 @@ namespace LinkedListTesting {
     [TestMethod]
     public void TestExtend() {
       LinkedList.LinkedList list = new();
-      list.Append("1");
-      list.Append("2");
-      list.Append("3");
-      list.Append("4");
-      list.Append("5");
+      list.Append("a");
+      list.Append("b");
+      list.Append("c");
+      list.Append("d");
+      list.Append("e");
 
       LinkedList.LinkedList list2 = new();
-      list2.Append("a");
-      list2.Append("b");
-      list2.Append("c");
-      list2.Append("d");
-      list2.Append("e");
+      list2.Append("1");
+      list2.Append("2");
+      list2.Append("3");
+      list2.Append("4");
+      list2.Append("5");
 
       list2.Extend(list);
 
       string expectedResult =
-        "8 1\n" +
-        "1 6\n" +
-        "6 7\n" +
-        "7 2\n" +
+        "1 2\n" +
         "2 3\n" +
         "3 4\n" +
         "4 5\n" +
         "5 a\n" +
+        "a b\n" +
         "b c\n" +
         "c d\n" +
         "d e\n" +
         "e null";
+      Assert.AreEqual(list2.Show(), expectedResult);
     }
   }
 }
