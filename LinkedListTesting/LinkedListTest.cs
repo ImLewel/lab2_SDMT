@@ -178,5 +178,24 @@ namespace LinkedListTesting {
         "e null";
       Assert.AreEqual(list2.Show(), expectedResult);
     }
+    [TestMethod]
+    public void TestDelete() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("s");
+      list.Append("4");
+      list.Append("5");
+
+      list.Delete(3);
+      string expectedResult = 
+        "1 2\n" +
+        "2 3\n" +
+        "3 4\n" +
+        "4 5\n" +
+        "5 null";
+      Assert.AreEqual(expectedResult, list.Show());
+    }
   }
 }

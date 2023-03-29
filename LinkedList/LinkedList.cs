@@ -91,6 +91,11 @@ namespace LinkedList {
       }
       Relink();
     }
+
+    public void Delete(int index) {
+      List.RemoveAt(index);
+      Relink();
+    }
  
     public class Node {
       public Node? Next;
