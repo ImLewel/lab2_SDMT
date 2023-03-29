@@ -66,6 +66,22 @@ namespace LinkedList {
 
     public LinkedList Clone() => this;
 
+    public void deleteAll(string value) {
+      List.RemoveAll(node => node.Data == value);
+      for (int i = 0; i < List.Count; i++) {
+        if (i < List.Count - 1) {
+          if (i == 0)
+            Head = List[i];
+          List[i].Next = List[i + 1];
+        }
+        if (i == List.Count - 1) {
+          Tail = List[i];
+          List[i].Next = null;
+        }
+
+      }
+    }
+ 
     public class Node {
       public Node? Next;
       public string Data;
