@@ -5,13 +5,11 @@ namespace LinkedList {
     static void Main(string[] args) {
       LinkedList list = new();
       list.Append("1");
-      list.Append("s");
+      list.Append("2");
       list.Append("3");
       list.Append("4");
-      list.Append("s");
-      Console.WriteLine(list.Show());
-      list.deleteAll("h");
-      list.Append("zz");
+      list.Append("5");
+
       Console.WriteLine(list.Show());
     }
   }

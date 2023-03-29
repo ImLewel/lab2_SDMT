@@ -47,14 +47,7 @@ namespace LinkedList {
         throw (new IndexOutOfRangeException());
       Node node = new Node(data);
       List.Insert(index, node);
-      if (index == 0) {
-        Head = node;
-        List[index].Next = List[++index];
-      }
-      else if (index < List.Count) {
-        List[index].Next = List[index + 1];
-        List[index - 1].Next = List[index];
-      }
+      Relink();
     }
 
     public void Clear() {
@@ -68,6 +61,10 @@ namespace LinkedList {
 
     public void deleteAll(string value) {
       List.RemoveAll(node => node.Data == value);
+      Relink();
+    }
+
+    private void Relink() {
       for (int i = 0; i < List.Count; i++) {
         if (i < List.Count - 1) {
           if (i == 0)
@@ -78,7 +75,6 @@ namespace LinkedList {
           Tail = List[i];
           List[i].Next = null;
         }
-
       }
     }
  
