@@ -75,5 +75,21 @@ namespace LinkedListTesting {
       list.Append("5");
       Assert.AreEqual(list.Show(), "5 null");
     }
+    [TestMethod]
+    public void TestClone() {
+      LinkedList.LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      LinkedList.LinkedList list2 = list.Clone();
+      Assert.AreEqual(list2.Show(), list.Show());
+
+      list.Append("6");
+      list2.Append("6");
+      Assert.AreEqual(list2.Show(), list.Show());
+    }
   }
 }

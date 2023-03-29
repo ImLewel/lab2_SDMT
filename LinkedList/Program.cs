@@ -4,7 +4,6 @@ namespace LinkedList {
   public class Program {
     static void Main(string[] args) {
       LinkedList list = new();
-      Console.WriteLine(list.Length);
       list.Append("1");
       list.Append("2");
       list.Append("3");
@@ -14,10 +13,9 @@ namespace LinkedList {
       list.Insert(2, "7");
       list.Insert(0, "8");
       Console.WriteLine(list.Show());
-      Console.WriteLine(list.Length);
-      list.Clear();
-      Console.WriteLine(list.Show());
-      Console.WriteLine(list.Length);
+      Console.WriteLine(list.Length + "\n");
+      LinkedList list2 = list.Clone();
+      Console.WriteLine(list2.Show());
     }
   }
 }

@@ -64,6 +64,8 @@ namespace LinkedList {
       current = null;
     }
 
+    public LinkedList Clone() => this;
+
     public class Node {
       public Node? Next;
       public string Data;
