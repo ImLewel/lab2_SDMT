@@ -10,6 +10,7 @@ namespace ImLewel_LinkedList {
     Node Tail;
     Node current;
     private int length = 0;
+    public int Length() => length;
 
 
     private class Node {
