@@ -6,6 +6,18 @@ using System.Threading.Tasks;
 
 namespace ImLewel_LinkedList {
   public class LinkedList {
-    
+    Node Head;
+    Node Tail;
+    Node current;
+    private int length = 0;
+
+
+    private class Node {
+      Node? next;
+      string data;
+      public Node(string _data) {
+        data = _data;
+      }
+    }
   }
 }
