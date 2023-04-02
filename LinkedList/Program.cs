@@ -8,7 +8,11 @@
       list.Append("4");
       list.Append("5");
 
-      Console.WriteLine(list.Get(2));
+      LinkedList list2 = list.Clone();
+      list2.Append("6");
+
+      Console.WriteLine(list.Show());
+      Console.WriteLine(list2.Show());
     }
   }
 }

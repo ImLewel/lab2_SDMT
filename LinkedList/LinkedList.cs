@@ -121,6 +121,16 @@ namespace ImLewel_LinkedList {
       return curr.Data;
     }
 
+    public LinkedList Clone() {
+      LinkedList res = new LinkedList();
+      Node current = Head;
+      while (current != null) {
+        res.Append(current.Data);
+        current = current.Next;
+      }
+      return res;
+    }
+
     private class Node {
       public Node? Next;
       public string Data;
