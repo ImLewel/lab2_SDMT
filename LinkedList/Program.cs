@@ -9,7 +9,7 @@
       list.Append("5");
 
       LinkedList list2 = list.Clone();
-      list2.Append("6");
+      list2 = list2.Reverse();
 
       Console.WriteLine(list.Show());
       Console.WriteLine(list2.Show());

@@ -131,6 +131,18 @@ namespace ImLewel_LinkedList {
       return res;
     }
 
+    public LinkedList Reverse() {
+      LinkedList tmp = new();
+      Node current = Head;
+      tmp.Append(current.Data);
+      current = current.Next;
+      while (current != null) {
+        tmp.Insert(0, current.Data);
+        current = current.Next;
+      }
+      return tmp;
+    }
+
     private class Node {
       public Node? Next;
       public string Data;

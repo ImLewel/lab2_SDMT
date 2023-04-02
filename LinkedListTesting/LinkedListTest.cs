@@ -135,5 +135,29 @@ namespace LinkedListTesting {
       Assert.AreNotEqual(list.Show(), list2.Show());
       Assert.AreNotEqual(list.Length(), list2.Length());
     }
+
+    [TestMethod]
+    public void TestReverse() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      LinkedList list2 = list.Clone();
+      list2 = list2.Reverse();
+
+      Assert.AreNotEqual(list.Show(), list2.Show());
+      Assert.AreEqual(list.Length(), list2.Length());
+
+     string expected =
+        "5 4\n" +
+        "4 3\n" +
+        "3 2\n" +
+        "2 1\n" +
+        "1 null";
+      Assert.AreEqual(expected, list2.Show());
+    }
   }
 }
