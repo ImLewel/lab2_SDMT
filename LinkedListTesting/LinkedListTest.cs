@@ -59,5 +59,32 @@ namespace LinkedListTesting {
         "4 null";
       Assert.AreEqual(expected, list.Show());
     }
+
+    [TestMethod]
+    public void TestDeleteAll() {
+      LinkedList list = new();
+      list.Append("s");
+      list.Append("s");
+      list.Append("1");
+      list.Append("s");
+      list.Append("2");
+      list.Append("s");
+      list.Append("3");
+      list.Append("s");
+      list.Append("4");
+      list.Append("5");
+      list.Append("s");
+      list.Append("s");
+
+      list.DeleteAll("s");
+
+      string expected =
+        "1 2\n" +
+        "2 3\n" +
+        "3 4\n" +
+        "4 5\n" +
+        "5 null";
+      Assert.AreEqual(expected, list.Show());
+    }
   }
 }

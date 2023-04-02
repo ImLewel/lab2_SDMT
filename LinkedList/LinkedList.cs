@@ -72,6 +72,9 @@ namespace ImLewel_LinkedList {
         if (i + 1 == index) {
           res = curr.Next.Data;
           curr.Next = curr.Next.Next;
+          if (index == length - 1) {
+            Tail = curr;
+          }
           --length;
           break;
         }
@@ -84,6 +87,28 @@ namespace ImLewel_LinkedList {
         curr = curr.Next;
       }
       return res;
+    }
+
+    public void DeleteAll(string toFind) {
+      for (int j = 0; j < length; j++) {
+        Node curr = Head;
+        for (int i = 0; i < length; i++) {
+          if (Head.Data == toFind) {
+            Head = Head.Next;
+            --length;
+          }
+          else if (curr.Next == Tail && Tail.Data == toFind) {
+            curr.Next = null;
+            Tail = curr;
+            --length;
+          }
+          else if (curr.Next != null && curr.Next.Data == toFind) {
+            curr.Next = curr.Next.Next;
+            --length;
+          }
+          curr = curr.Next;
+        }
+      }
     }
 
     private class Node {
