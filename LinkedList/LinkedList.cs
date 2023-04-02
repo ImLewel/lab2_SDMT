@@ -170,6 +170,14 @@ namespace ImLewel_LinkedList {
       return res;
     }
 
+    public LinkedList Clear() => new();
+
+    public void ClearInCurrent() {
+      while (length != 0) {
+        Delete(0);
+      }
+    }
+
     private class Node {
       public Node? Next;
       public string Data;

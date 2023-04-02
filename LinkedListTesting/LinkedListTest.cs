@@ -176,5 +176,27 @@ namespace LinkedListTesting {
       Assert.AreEqual(list.FindFirst("2"), expectedFirst);
       Assert.AreEqual(list.FindLast("2"), expectedLast);
     }
+
+    [TestMethod]
+    public void TestClear() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      list = list.Clear();
+      Assert.AreEqual(list.Show(), String.Empty);
+
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      list.ClearInCurrent();
+      Assert.AreEqual(list.Show(), String.Empty);
+    }
   }
 }

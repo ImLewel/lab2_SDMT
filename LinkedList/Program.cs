@@ -10,8 +10,8 @@
       list.Append("4");
       list.Append("5");
 
-      Console.WriteLine(list.FindFirst("1"));
-      Console.WriteLine(list.FindLast("1"));
+      list.ClearInCurrent();
+      Console.WriteLine(list.Show());
     }
   }
 }
