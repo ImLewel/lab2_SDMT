@@ -100,5 +100,24 @@ namespace LinkedListTesting {
       Assert.AreEqual(list.Get(4), "5");
       Assert.AreEqual(list.Get(0), "1");
     }
+
+    [TestMethod]
+    public void TestLength() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      Assert.AreEqual(list.Length(), 5);
+
+      list.Append("6");
+      list.Insert(2, "6");
+      Assert.AreEqual(list.Length(), 7);
+
+      list.DeleteAll("6");
+      Assert.AreEqual(list.Length(), 5);
+    }
   }
 }
