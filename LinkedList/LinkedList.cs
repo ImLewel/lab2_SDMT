@@ -123,10 +123,10 @@ namespace ImLewel_LinkedList {
 
     public LinkedList Clone() {
       LinkedList res = new LinkedList();
-      Node current = Head;
-      while (current != null) {
-        res.Append(current.Data);
-        current = current.Next;
+      Node curr = Head;
+      while (curr != null) {
+        res.Append(curr.Data);
+        curr = curr.Next;
       }
       return res;
     }
