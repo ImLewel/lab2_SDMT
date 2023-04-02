@@ -198,5 +198,38 @@ namespace LinkedListTesting {
       list.ClearInCurrent();
       Assert.AreEqual(list.Show(), String.Empty);
     }
+
+    [TestMethod]
+    public void TestExtend() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      LinkedList list2 = new();
+      list2.Append("a");
+      list2.Append("b");
+      list2.Append("c");
+      list2.Append("d");
+      list2.Append("e");
+
+      list.Extend(list2);
+
+      string expected =
+        "1 2\n" +
+        "2 3\n" +
+        "3 4\n" +
+        "4 5\n" +
+        "5 a\n" +
+        "a b\n" +
+        "b c\n" +
+        "c d\n" +
+        "d e\n" +
+        "e null";
+
+      Assert.AreEqual(expected, list.Show());
+    }
   }
 }

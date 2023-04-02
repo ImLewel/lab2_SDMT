@@ -178,6 +178,14 @@ namespace ImLewel_LinkedList {
       }
     }
 
+    public void Extend(LinkedList extension) {
+      Node curr = extension.Head;
+      while (curr != null) {
+        this.Append(curr.Data);
+        curr = curr.Next;
+      }
+    }
+
     private class Node {
       public Node? Next;
       public string Data;
