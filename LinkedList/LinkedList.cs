@@ -143,6 +143,33 @@ namespace ImLewel_LinkedList {
       return tmp;
     }
 
+    public int FindFirst(string toFind) {
+      Node curr = Head;
+      int res = -1;
+      for (int i = 0; i < length; i++) {
+        if (curr.Data == toFind) {
+          res = i;
+          break;
+        }
+        curr = curr.Next;
+      }
+      return res;
+    }
+
+    public int FindLast(string toFind) {
+      LinkedList tmp = this.Reverse();
+      Node curr = tmp.Head;
+      int res = -1;
+      for (int i = 0; i < length; i++) {
+        if (curr.Data == toFind) {
+          res = i;
+          break;
+        }
+        curr = curr.Next;
+      }
+      return res;
+    }
+
     private class Node {
       public Node? Next;
       public string Data;

@@ -3,16 +3,15 @@
     static void Main(string[] args) {
       LinkedList list = new();
       list.Append("1");
+      list.Append("1");
+      list.Append("2");
       list.Append("2");
       list.Append("3");
       list.Append("4");
       list.Append("5");
 
-      LinkedList list2 = list.Clone();
-      list2 = list2.Reverse();
-
-      Console.WriteLine(list.Show());
-      Console.WriteLine(list2.Show());
+      Console.WriteLine(list.FindFirst("1"));
+      Console.WriteLine(list.FindLast("1"));
     }
   }
 }

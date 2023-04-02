@@ -159,5 +159,22 @@ namespace LinkedListTesting {
         "1 null";
       Assert.AreEqual(expected, list2.Show());
     }
+
+    [TestMethod]
+    public void TestFindFirstAndLast() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("1");
+      list.Append("2");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      int expectedFirst = 2;
+      int expectedLast = 3;
+      Assert.AreEqual(list.FindFirst("2"), expectedFirst);
+      Assert.AreEqual(list.FindLast("2"), expectedLast);
+    }
   }
 }
