@@ -42,6 +42,28 @@ namespace ImLewel_LinkedList {
       return res;
     }
 
+    public void Insert(int index, string data) {
+      if (index < 0 || index > length - 1)
+        throw (new IndexOutOfRangeException());
+      Node ToInsert = new Node(data);
+      Node curr = Head;
+      for (int i = 0; i < length; i++) {
+        if (i + 1 == index) {
+          ToInsert.Next = curr.Next;
+          curr.Next = ToInsert;
+          ++length;
+          break;
+        }
+        else if (index == 0) {
+          ToInsert.Next = Head;
+          Head = ToInsert;
+          ++length;
+          break;
+        }
+        curr = curr.Next;
+      }
+    }
+
     private class Node {
       public Node? Next;
       public string Data;

@@ -20,5 +20,25 @@ namespace LinkedListTesting {
         "5 null";
       Assert.AreEqual(expected, list.Show());
     }
+
+    [TestMethod]
+    public void TestInsert() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+      list.Insert(3, "s");
+
+      string expected =
+        "1 2\n" +
+        "2 3\n" +
+        "3 s\n" +
+        "s 4\n" +
+        "4 5\n" +
+        "5 null";
+      Assert.AreEqual(expected, list.Show());
+    }
   }
 }
