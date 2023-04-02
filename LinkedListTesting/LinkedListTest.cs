@@ -40,5 +40,24 @@ namespace LinkedListTesting {
         "5 null";
       Assert.AreEqual(expected, list.Show());
     }
+
+    [TestMethod]
+    public void TestDelete() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+      
+      Assert.AreEqual(list.Delete(0), "1");
+      Assert.AreEqual(list.Delete(3), "5");
+
+      string expected =
+        "2 3\n" +
+        "3 4\n" +
+        "4 null";
+      Assert.AreEqual(expected, list.Show());
+    }
   }
 }

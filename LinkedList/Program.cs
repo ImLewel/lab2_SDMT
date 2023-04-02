@@ -7,6 +7,8 @@
       list.Append("3");
       list.Append("4");
       list.Append("5");
+      Console.WriteLine(list.Delete(4));
+      Console.WriteLine(list.Show());
     }
   }
 }

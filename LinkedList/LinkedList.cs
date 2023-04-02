@@ -63,6 +63,28 @@ namespace ImLewel_LinkedList {
         curr = curr.Next;
       }
     }
+    public string Delete(int index) {
+      if (index < 0 || index > length - 1)
+        throw (new IndexOutOfRangeException());
+      Node curr = Head;
+      string res = String.Empty;
+      for (int i = 0; i < length; i++) {
+        if (i + 1 == index) {
+          res = curr.Next.Data;
+          curr.Next = curr.Next.Next;
+          --length;
+          break;
+        }
+        else if (index == 0) {
+          res = Head.Data;
+          Head = Head.Next;
+          --length;
+          break;
+        }
+        curr = curr.Next;
+      }
+      return res;
+    }
 
     private class Node {
       public Node? Next;
