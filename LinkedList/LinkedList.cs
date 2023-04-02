@@ -111,6 +111,16 @@ namespace ImLewel_LinkedList {
       }
     }
 
+    public string Get(int index) {
+      Node curr = Head;
+      for (int i = 0; i < length; i++) {
+        if (i == index)
+          break;
+        curr = curr.Next;
+      }
+      return curr.Data;
+    }
+
     private class Node {
       public Node? Next;
       public string Data;

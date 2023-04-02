@@ -8,8 +8,7 @@
       list.Append("4");
       list.Append("5");
 
-      list.DeleteAll("s");
-      Console.WriteLine(list.Show());
+      Console.WriteLine(list.Get(2));
     }
   }
 }

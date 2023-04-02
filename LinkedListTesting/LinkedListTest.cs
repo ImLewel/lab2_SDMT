@@ -86,5 +86,19 @@ namespace LinkedListTesting {
         "5 null";
       Assert.AreEqual(expected, list.Show());
     }
+
+    [TestMethod]
+    public void TestGet() {
+      LinkedList list = new();
+      list.Append("1");
+      list.Append("2");
+      list.Append("3");
+      list.Append("4");
+      list.Append("5");
+
+      Assert.AreEqual(list.Get(2), "3");
+      Assert.AreEqual(list.Get(4), "5");
+      Assert.AreEqual(list.Get(0), "1");
+    }
   }
 }
